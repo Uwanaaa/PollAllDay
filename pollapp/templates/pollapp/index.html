@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<title>Pollers</title>
+
+<body>
+    <h1><center>Polls Of The Day</center></h1>
+    {%if latest_questions%}
+    <ul>
+        {% for question in latest_questions%}
+        <li><a href="/poll/{{question_id}}">{{question.question_text}}</a></li>
+        {%endfor%}
+    </ul>
+    {%else%}
+    <p>No polls are available</p>
+    {%endif%}
+</body>
+
+</html>
